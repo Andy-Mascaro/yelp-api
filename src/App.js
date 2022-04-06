@@ -6,12 +6,12 @@ import { fetchBusinesses } from './services/yelp';
 function App() {
   const [businesses, setBusinesses] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [zipCode, setZipCode] = useState('');
   // TODO -- add state for zip / search and add event listeners to the inputs
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchBusinesses(`./netlify/functions/yelp?zip=93117&category=businesses`);
+      const data = await fetchBusinesses();
       setBusinesses(data);
       setLoading(false);
     };

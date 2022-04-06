@@ -7,7 +7,7 @@ exports.handler = async (event) => {
     const response = await fetch(`https://api.yelp.com/v3/businesses/search?location=${zip}&businesses=${businesses}`,
       {
         headers:{
-          Authorization: `Bearer ${process.env.React_APP_YELP_KEY}`,
+          Authorization: `Bearer ${process.env.YELP_API_KEY}`,
         },
       }
     );
@@ -25,7 +25,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({ error: 'Failed fetching data' }),
     };
   }
-};
+}; 
 
 
 

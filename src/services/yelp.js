@@ -6,5 +6,5 @@ export async function fetchBusinesses(zip = '93117', search = '') {
     headers: { Accept: 'application/json' },
   });
   const data = await resp.json();
-  return data;
+  return data.data.businesses;
 }
