@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [zipCode, setZipCode] = useState('');
   const [search, setSearch] = useState('');
-  // TODO -- add state for zip / search and add event listeners to the inputs
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,8 +24,6 @@ function App() {
     return setBusinesses(data);
 
   };
-
-  // TODO -- add event for button click to handle calling fetchBusinesses with zip / search
 
   return (
     <div className="App">
